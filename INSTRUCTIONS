@@ -1,0 +1,67 @@
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension) {
+    var API = new APIConstructor();
+
+    return iatExtension({
+        category1: {
+            name: 'Personas con sobrepeso',
+            title: {
+                media: { word: 'Personas con sobrepeso' },
+                css: { color: '#31940F', 'font-size': '1.8em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { image: '1_B.jpg' }, { image: '2_B.jpg' }, { image: '3_B.jpg' },
+                { image: '4_B.jpg' }, { image: '5_B.jpg' }, { image: '6_B.jpg' },
+                { image: '7_B.jpg' }, { image: '8_B.jpg' }, { image: '9_B.jpg' },
+                { image: '10_B.jpg' }
+            ],
+            stimulusCss: { color: '#31940F', 'font-size': '2.3em' }
+        },
+        category2: {
+            name: 'Personas delgadas',
+            title: {
+                media: { word: 'Personas delgadas' },
+                css: { color: '#31940F', 'font-size': '1.8em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { image: '1_A.jpg' }, { image: '2_A.jpg' }, { image: '3_A.jpg' },
+                { image: '4_A.jpg' }, { image: '5_A.jpg' }, { image: '6_A.jpg' },
+                { image: '7_A.jpg' }, { image: '8_A.jpg' }, { image: '9_A.jpg' },
+                { image: '10_A.jpg' }
+            ],
+            stimulusCss: { color: '#31940F', 'font-size': '2.3em' }
+        },
+        attribute1: {
+            name: 'Palabras negativas',
+            title: {
+                media: { word: 'Palabras negativas' },
+                css: { color: '#0000FF', 'font-size': '1.8em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { word: 'Triste' }, { word: 'Horrible' }, { word: 'Asqueroso' },
+                { word: 'Odio' }, { word: 'Repulsivo' }, { word: 'Terrible' },
+                { word: 'Feo' }, { word: 'Desagradable' }
+            ],
+            stimulusCss: { color: '#0000FF', 'font-size': '2.3em' }
+        },
+        attribute2: {
+            name: 'Palabras positivas',
+            title: {
+                media: { word: 'Palabras positivas' },
+                css: { color: '#0000FF', 'font-size': '1.8em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { word: 'Agradable' }, { word: 'Bello' }, { word: 'Feliz' },
+                { word: 'Encantador' }, { word: 'Fantástico' }, { word: 'Hermoso' },
+                { word: 'Placentero' }, { word: 'Maravilloso' }
+            ],
+            stimulusCss: { color: '#0000FF', 'font-size': '2.3em' }
+        },
+        base_url: {
+            image: 'https://TU_USUARIO.github.io/TU_REPOSITORIO/images/'
+        }
+    });
+});
