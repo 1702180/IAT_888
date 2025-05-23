@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Prueba IAT</title>
+    <!-- Carga RequireJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script>
+        // Configura paths si quieres (opcional)
+        require.config({
+            // Puedes definir alias o rutas aquí si necesitas
+        });
+
+        // Carga tu script que usa define()
+        require(['miIATPESO'], function(iat) {
+            // Aquí puedes iniciar el experimento o hacer algo con 'iat'
+            console.log('IAT cargado:', iat);
+            // El script retorna la función para iniciar el IAT,
+            // dependiendo de cómo esté hecho podrías hacer algo como:
+            // iat.start();  (Si la función se llama así)
+        });
+    </script>
 </head>
 <body>
     <h1>¡Funciona tu página de GitHub!</h1>
+    <div id="experiment-container"></div> <!-- contenedor para el experimento -->
 </body>
 </html>
